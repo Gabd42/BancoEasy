@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BancoEasy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BancoEasy - Conta Bancária</h1>
+        
+        <!-- Formulário de criação de conta -->
+        <section>
+            <h2>Criar Conta</h2>
+            <form id="formCreateAccount">
+                <input type="text" id="accountHolder" placeholder="Nome do Titular" required>
+                <input type="number" id="initialDeposit" placeholder="Depósito Inicial" required>
+                <button type="submit">Criar Conta</button>
+            </form>
+        </section>
+
+        <!-- Exibição de saldo -->
+        <section>
+            <h2>Consultar Saldo</h2>
+            <input type="number" id="accountId" placeholder="ID da Conta">
+            <button onclick="consultBalance()">Consultar</button>
+            <p id="balanceDisplay"></p>
+        </section>
+
+        <!-- Depósitos -->
+        <section>
+            <h2>Depositar</h2>
+            <input type="number" id="depositAmount" placeholder="Valor do Depósito">
+            <button onclick="deposit()">Depositar</button>
+        </section>
+
+        <!-- Saques -->
+        <section>
+            <h2>Sacar</h2>
+            <input type="number" id="withdrawAmount" placeholder="Valor do Saque">
+            <button onclick="withdraw()">Sacar</button>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
